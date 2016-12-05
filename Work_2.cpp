@@ -15,17 +15,17 @@ int a, b, c;
 void ShowMenu(int iItem)
 {
 	system("cls");
-	printf("%s1 - Ñëîæåíèå\n", iItem == 1 ? ">" : " ");
-	printf("%s2 - Âû÷èòàíèå\n", iItem == 2 ? ">" : " ");
-	printf("%s3 - Âîçâåäåíèå â ñòåïåíü\n", iItem == 3 ? ">" : " ");
-	printf("%s4 - Âûõîä\n", iItem == 4 ? ">" : " ");
+	printf("%s1 - plus\n", iItem == 1 ? ">" : " ");
+	printf("%s2 - minus\n", iItem == 2 ? ">" : " ");
+	printf("%s3 - stepen\n", iItem == 3 ? ">" : " ");
+	printf("%s4 - exid\n", iItem == 4 ? ">" : " ");
 	
 }
 
 int sum() 
 {
 
-	cout << "Ââåäèòå äâà ÷èñëà äëÿ ñëîæåíèÿ, ïîäòâåğæäàÿ ââîä êëàâèøåé 'enter':  " << endl;
+	cout << "vvedite 2 chisla dlya slojeniya, i najmite 'enter':  " << endl;
 	cin >> a;
 	cin >> b;
 	
@@ -36,7 +36,7 @@ int sum()
 
 int m_1()
 {
-	cout << "Ââåäèòå äâà ÷èñëà äëÿ âû÷èòàíèÿ, ïîäòâåğæäàÿ ââîä êëàâèøåé 'enter':  " << endl;
+	cout << "vvedite 2 chisla dlya minusa, i najmite 'enter':  " << endl;
 	cin >> a;
 	cin >> b;
 
@@ -47,9 +47,9 @@ int m_1()
 
 int sqrt()
 {
-	cout << "Ââåäèòå ÷èñëî äëÿ âîçâåäåíèÿ â ñòåïåíü:  " << endl;
+	cout << "vvedite chislo dlya vozvedeniya v stepen:  " << endl;
 	cin >> a;
-	cout << "Ââåäèòå ñòåïåíü â êîòîğóş íåîáõîäèìî âîçâåñòè ÷èñëî:  " << endl;
+	cout << "vvedite stepen:  " << endl;
 	cin >> b;
 
 	int m=a;
@@ -66,7 +66,7 @@ int fin()
 {
 	cout << "//---------------------------------------------------------------//" << endl;
 	cout << "//---------------------------------------------------------------//" << endl;
-	cout << "Áëàãîäàğèì çà èñïîëüçîâàíèå íàøåãî êàëüêóëÿòîğà!" << endl;
+	cout << "Thank you for using our calculator!" << endl;
 	system("pause");
 	return 0;
 }
@@ -75,8 +75,8 @@ int main()
 {
 	setlocale(0, "");
 
-	int iItem = 1;//Îòâå÷àåò êàêîé ïóíêò ìåíş àêòèâåí â äàííûé ìîìåíò
-	int nLast = 4;//Îòâå÷àåò êàêîé èíäåêñ ó ïîñëåäíåãî ïóíêòà ìåíş
+	int iItem = 1;//ÃÃ²Ã¢Ã¥Ã·Ã Ã¥Ã² ÃªÃ ÃªÃ®Ã© Ã¯Ã³Ã­ÃªÃ² Ã¬Ã¥Ã­Ã¾ Ã ÃªÃ²Ã¨Ã¢Ã¥Ã­ Ã¢ Ã¤Ã Ã­Ã­Ã»Ã© Ã¬Ã®Ã¬Ã¥Ã­Ã²
+	int nLast = 4;//ÃÃ²Ã¢Ã¥Ã·Ã Ã¥Ã² ÃªÃ ÃªÃ®Ã© Ã¨Ã­Ã¤Ã¥ÃªÃ± Ã³ Ã¯Ã®Ã±Ã«Ã¥Ã¤Ã­Ã¥Ã£Ã® Ã¯Ã³Ã­ÃªÃ²Ã  Ã¬Ã¥Ã­Ã¾
 	
 	ShowMenu(iItem);
 
@@ -84,7 +84,7 @@ int main()
 	{
 		if (GetAsyncKeyState(VK_UP))
 		{
-			keybd_event(VK_UP, 0, KEYEVENTF_KEYUP, 0);//Îòæèìàåì êíîïêó
+			keybd_event(VK_UP, 0, KEYEVENTF_KEYUP, 0);//ÃÃ²Ã¦Ã¨Ã¬Ã Ã¥Ã¬ ÃªÃ­Ã®Ã¯ÃªÃ³
 			if (0 < iItem - 1)
 				iItem = iItem - 1;
 			else
@@ -93,7 +93,7 @@ int main()
 		}
 		if (GetAsyncKeyState(VK_DOWN))
 		{
-			keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);//Îòæèìàåì êíîïêó
+			keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);//ÃÃ²Ã¦Ã¨Ã¬Ã Ã¥Ã¬ ÃªÃ­Ã®Ã¯ÃªÃ³
 			if (iItem < nLast)
 				iItem = iItem + 1;
 			else
@@ -102,23 +102,23 @@ int main()
 		}
 		if (GetAsyncKeyState(VK_RETURN))
 		{
-			keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);//Îòæèìàåì êíîïêó
+			keybd_event(VK_DOWN, 0, KEYEVENTF_KEYUP, 0);//ÃÃ²Ã¦Ã¨Ã¬Ã Ã¥Ã¬ ÃªÃ­Ã®Ã¯ÃªÃ³
 			ShowMenu(iItem);
 			switch (iItem)
 			{
 			case 1:
 				sum();		
-				cout << "Ñóììà = " << c << endl;	
+				cout << "summ = " << c << endl;	
 				fin();
 				break;
 			case 2:
 				m_1();		
-				cout << "Ğàçíîñòü = " << c << endl;			
+				cout << "minus = " << c << endl;			
 				fin();
 				break;
 			case 3:
 				sqrt();
-				cout << "×èñëî â ñòåïåíè  = " << a << endl;	
+				cout << "chislo v stepen  = " << a << endl;	
 				fin();
 				break;
 			case 4:
